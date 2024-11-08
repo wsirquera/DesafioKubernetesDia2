@@ -16,9 +16,6 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-          
-      - name: Construção da Imagem Docker
-        run: echo "Executando o comando Docker Build"
 
       - name: Construção e envio da Imagem Docker
         uses: docker/build-push-action@v6
