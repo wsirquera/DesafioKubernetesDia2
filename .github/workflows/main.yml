@@ -42,4 +42,4 @@ jobs:
           aws-region: us-east-1
 
       - name: Configurar o kubectl
-        uses: aws eks update-kubeconfig --name eks-aula
+        run: aws eks update-kubeconfig --name eks-aula
