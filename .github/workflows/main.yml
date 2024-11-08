@@ -33,7 +33,6 @@ jobs:
     steps:
       - name: Obter o código do projeto
         uses: actions/checkout@v4
-
       - name: Autenticar na AWS
         uses: aws-actions/configure-aws-credentials@v4
         with:
