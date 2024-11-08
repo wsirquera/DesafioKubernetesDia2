@@ -8,6 +8,7 @@ jobs:
   ci:
     runs-on: ubuntu-latest
     steps:
+      
       - name: Autenticar no Docker Hub
         run: echo "Executando o comando Docker Login"
       - name: Construção da Imagem Docker
