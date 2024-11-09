@@ -48,10 +48,16 @@ jobs:
       - name: Configurar o kubectl
         run: aws eks update-kubeconfig --name eks-live
 
-      - name: Deploy dos manifestos no Kubernetes
+      - name: Deploy dos manifestos em k8s
         uses: Azure/k8s-deploy@v5
         with:
           manifests: |
             ./k8s/deployment.yaml
           images: |
             wsirquera/fake-shop:v${{ github.run_number }}
+
+      - name: Deploy dos manifestos em prometheus
+        uses: Azure/k8s-deploy@v5
+        with:
+          manifests: |
+            ./prometheus/deployment.yaml
