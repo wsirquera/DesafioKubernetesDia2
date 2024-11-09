@@ -53,5 +53,6 @@ jobs:
         with:
           manifests: |
             ./k8s/deployment.yaml
+            ./prometheus/deployment.yaml
           images: |
             wsirquera/fake-shop:v${{ github.run_number }}
